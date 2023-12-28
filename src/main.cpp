@@ -12,8 +12,12 @@ void setup() {
   LOG_VALUE("result is: ", result);
 }
 
+int counter = 0;
+
 void loop() {
   // put your main code here, to run repeatedly:
+  LOG_VALUE("counter: ", counter);
+  counter++;
   delay(1000);
 }
 
