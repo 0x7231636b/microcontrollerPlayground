@@ -11,14 +11,20 @@ void setup() {
   // put your setup code here, to run once:
   int result = myFunction(2, 3);
   LOG_VALUE("result is: ", result);
+  pinMode(13, OUTPUT);
 }
 
 int counter = 0;
+bool light = false;
 
 void loop() {
   // put your main code here, to run repeatedly:
   LOG_VALUE("counter: ", counter);
   counter++;
+  if(light) {
+    digitalWrite(13, HIGH);
+    light = !light;
+  }
   delay(1000);
 }
 
